@@ -1147,7 +1147,7 @@
 		function showElement() {
 			console.log("Validating phone number...");
 			const phoneInput = document.querySelector("#form-input-phone").value;
-			if (!/^\d{11}$/.test(phoneInput)) {
+			if ((/^\d{10}$/.test(phoneInput) || /^\d{11}$/.test(phoneInput))==false) {
 				console.log("Invalid phone number.");
 				const errorMsg = document.querySelector(".err_msg_text");
 				errorMsg.style.visibility = "visible";
@@ -1207,7 +1207,7 @@
 
 
 				// Send emails if phone number is valid
-				if (/^\d{11}$/.test(phone)) {
+				if (/^\d{11}$/.test(phone) || /^\d{10}$/.test(phone)) {
 					const templateParams = {
 						recipient_email: "kota.kikushima@marketingbasee.com",
 						subject: "お問い合わせいただきありがとうございます【リショップナビ外壁塗装・外壁塗装コンシェルジュ】",
