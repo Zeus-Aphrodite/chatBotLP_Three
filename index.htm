@@ -54,8 +54,7 @@
 				</a>
 			</div>
 			<div class="img-info">
-				<a target="_top"> <img src="assets/images/info.png" alt="外壁塗装コンシェルジュ" class="img-responsive"
-						>
+				<a target="_top"> <img src="assets/images/info.png" alt="外壁塗装コンシェルジュ" class="img-responsive">
 				</a>
 			</div>
 		</header>
@@ -1114,7 +1113,7 @@
 					<button type="button" class="cv_entry no_display submitToRehome" onclick="showElement()">
 						<p class="btn-submit-form">電話番号で<br>
 							算定結果をもらう
-							</p>
+						</p>
 						<p class="icon"><span></span></p>
 					</button>
 				</section>
@@ -1147,7 +1146,7 @@
 		function showElement() {
 			console.log("Validating phone number...");
 			const phoneInput = document.querySelector("#form-input-phone").value;
-			if ((/^\d{10}$/.test(phoneInput) || /^\d{11}$/.test(phoneInput))==false) {
+			if ((/^\d{10}$/.test(phoneInput) || /^\d{11}$/.test(phoneInput)) == false) {
 				console.log("Invalid phone number.");
 				const errorMsg = document.querySelector(".err_msg_text");
 				errorMsg.style.visibility = "visible";
@@ -1188,7 +1187,7 @@
 				// Prepare email content
 				const emailContent = `
 					<div>
-						<h2>お客様が当社のサイト(gaihekidiagnose.com)をご利用いただきました。</h2>
+						<h2>お客様が当社のサイト(yamadakougyou1-gaiheki.com)をご利用いただきました。</h2>
 						<p><strong>対象の物件は一戸建てでしょうか？</strong> ${buildingTypeRadio || buildingTypeDropdownText}</p>
 						<p><strong>どのような工事をご希望ですか？</strong> ${workType || "未選択"}</p>
 						<p><strong>目的はどちらになりますか？</strong> ${studyStatus || "未選択"}</p>
@@ -1202,6 +1201,8 @@
 						<p><strong>物件の所在地はどちらでしょうか？</strong> ${selectedPrefecture}</p>
 						<p><strong>お名前:</strong> ${name}</p>
 						<p><strong>電話番号:</strong> ${phone}</p>
+							<p><strong>メールアドレス: yamadakougyou1@yahoo.co.jp</p>
+						<p><strong>メールアドレス: kota.kikushima@marketingbasee.com</p>
 					</div>
 				`;
 
